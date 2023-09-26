@@ -4,7 +4,7 @@ padding: 0%;
 }
 .main-div{
     display: flex;
-    /* flex-wrap: wrap; */
+    
     align-items: center;
     justify-content: space-between;
     background-color: #48afff;
@@ -105,3 +105,23 @@ h2{
     .whi{
         color: white;
     }
+    #parent{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .main{
+        background-color: white;
+        background-size: 100% 100%;
+        padding: 20px;
+    margin-top: 2rem;
+        border-radius: 20px 10px 20px 10px; 
+    }
+    .container{
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 20px;
+        width: auto;
+    
+}

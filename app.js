@@ -104,15 +104,18 @@ for(let i = 0; i<phones.length;i++){
  const cartArry=[]
 
 function addcart(index) {
-    if (cartArry.includes==phones[index]) {
+    if (cartArry.includes(phones[index])) {
         
         for (let i = 0; i < cartArry.length; i++) {
-            if(cartArry[i]===phones[index]){
+            if(cartArry[i]==phones[index]){
+                
                 cartArry[i].quantity+=1
+                
             }
             
         }
-    } else {
+    }
+     else {
         
              Swal.fire({
             position: 'top-end',
@@ -123,14 +126,15 @@ function addcart(index) {
         })
         phones[index].quantity=1
         cartArry.push(phones[index])
-    }
+    
+     }
     console.log(cartArry);
-}
+ }
 
 
 
 function gotoCart() {
-    const cartItems = JSON.stringify(cartArry);
-    localStorage.setItem('cartArry', cartItems)
-    window.location = "./cart.html";
+    const cart = JSON.stringify(cartArry);
+    localStorage.setItem('cartArry', cart)
+    window.location = "cart.html";
 }
