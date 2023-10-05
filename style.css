@@ -81,12 +81,18 @@ h2{
 }
 .second{
     background-color: rgb(225, 217, 217);
+    margin-top: 20px;
+    
 }
 .ca{
     background-color: #03bdc7;
     color: white;
-    padding: 10px; 
- border-radius:  15px 20px 15px 20px;
+    padding:15px 20px 15px 20px; 
+    border-radius: 10px 20px 20px 10px;
+    font-size:20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-top: 20px;
     
 }
 .c{
@@ -125,3 +131,37 @@ h2{
         width: auto;
     
 }
+.h{
+    color:black;
+    padding: 6px;
+    margin-top: 5px;
+}
+.but{
+    padding: 5px 10px 5px 10px;
+    font-size:20px;
+    font-weight: bold;
+    color: #48afff;
+    border-radius:5px 10px 5px 10px ;
+    border-style: nones;
+}
+.images2{
+    height: 100px;
+   width: 140px;
+   position:absolute;
+   
+}
+.heloo{
+    margin-left: 145px;
+}
+.empty{
+    text-align: center;
+    color: white;
+    margin-top: 50px;
+}
+.new{
+   background-color: white;
+    color:black;
+    margin-top: 20px;
+    font-size: large;
+    
+} 

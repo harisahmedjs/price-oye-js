@@ -1,36 +1,41 @@
 function goHome() {
     window.location='index.html'
-    
+   
 }
 const parent=document.getElementById('parent')
+const total=document.getElementById("total")
 
  let dataa =localStorage.getItem('cartArry')
     let array =JSON.parse(dataa) 
    
     function render() {
-        for (let i = 0; i < array.length; i++) {
-
+        let Totals=0
+        total.innerHTML=""
+        if (array.length > 0) {
+            for (let i = 0; i < array.length; i++) {
+                Totals+= array[i].price * array[i].quantity;
         parent.innerHTML +=`<div>
              <div class = "second">
+             <h2> ${array[i].brand}</h2>
              <img class="image3" src = "${array[i].img}" alt="">
-             <h3><b>Brand</b>: ${array[i].brand}</h3>
-             <h4><b>Model</b>: ${array[i].model}</h4>
-             <h4><b>Ram</b>: ${array[i].ram}</h4>
-             <h4><b>Rom</b>: ${array[i].rom}</h4>
-             <h4><b>Camera</b>: ${array[i].camera}</h4>
              <h4><b>Quantity</b>: ${array[i].quantity}</h4>
              <h4><b>Price</b>: ${array[i].price}</h4>
              <h4><b>Total price</b>: ${array[i].price * array[i].quantity}</h4>
-             <button onclick = "sub(${i})" class = "btn2">-</button>
-             <h4> <b>Quantity</b>:${array[i].quantity}</h4>
-             <button onclick = "add(${i})" class = "btn2">+</button><br>
+             <button onclick = "sub(${i})" class = "but">-</button>
+             <h4> ${array[i].quantity}</h4>
+             <button onclick = "add(${i})" class = "but">+</button><br>
              <button  onclick = "del(${i})" class = "cart">Delete</button>
              </div> 
              </div>
             `
          
-            
+            total.innerHTML = `<h4 class="new">Grand total Price:${Totals} </h4>`;
     }
+   
+} 
+else {
+            parent.innerHTML=`<h2 class="empty">No item found...</h2>`
+        }
     }
     render()
 

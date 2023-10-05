@@ -21,13 +21,13 @@ const phones = [
         price: 31999,
     },
     {
-        brand: 'Infinix',
-        img:"https://rakistan.pk/wp-content/uploads/2021/11/infinix-zero-x-pro-pakistan-priceoye-im0ai-500x500-1.webp",
-        model: 'z10',
-        Ram: 2,
-        rom: 16,
-        camera: '5 megapixel',
-        price: 34999,
+        brand: 'infinix',
+        img:"https://images.priceoye.pk/tecno-spark-10-pakistan-priceoye-2144l.jpg",
+        model: 'spark10',
+        ram: 12,
+        rom: 512,
+        camera: '25 megapixel',
+        price: 39999 ,
     },
     {
         brand: 'Tecno',
@@ -101,6 +101,8 @@ for(let i = 0; i<phones.length;i++){
     </div>`
 }
 
+
+
  const cartArry=[]
 
 function addcart(index) {
@@ -135,6 +137,7 @@ function addcart(index) {
 
 function gotoCart() {
     const cart = JSON.stringify(cartArry);
+
     localStorage.setItem('cartArry', cart)
     window.location = "cart.html";
 }
