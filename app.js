@@ -101,9 +101,20 @@ for(let i = 0; i<phones.length;i++){
     </div>`
 }
 
+const cartData = localStorage.getItem('cartarr');
+const jsonData = JSON.parse(cartData);
 
 
- const cartArry=[]
+let cartArry;
+if(Array.isArray(jsonData)){
+    cartArry = [...jsonData]
+
+}else{
+    cartArry = []
+}
+
+
+
 
 function addcart(index) {
     if (cartArry.includes(phones[index])) {
@@ -140,4 +151,9 @@ function gotoCart() {
 
     localStorage.setItem('cartArry', cart)
     window.location = "cart.html";
+}
+
+
+function login() {
+    window.location='./login.html'
 }

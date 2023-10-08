@@ -163,5 +163,13 @@ h2{
     color:black;
     margin-top: 20px;
     font-size: large;
+    text-align: center;
     
 } 
+.images5{
+    height: 100px;
+   width: 140px;
+   position:absolute;
+   margin-top: 70px;
+   
+}

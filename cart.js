@@ -1,6 +1,6 @@
 function goHome() {
     window.location='index.html'
-   
+    localStorage.setItem('cartArry', JSON.stringify(array));
 }
 const parent=document.getElementById('parent')
 const total=document.getElementById("total")
@@ -29,7 +29,7 @@ const total=document.getElementById("total")
              </div>
             `
          
-            total.innerHTML = `<h4 class="new">Grand total Price:${Totals} </h4>`;
+            total.innerHTML = `<h4 class="new"><b>Grand total Price:${Totals} </b></h4>`;
     }
    
 } 
@@ -61,3 +61,7 @@ else {
            array[i].quantity += 1
            render()
         }
+        // reload 
+        window.onbeforeunload = function () {
+            localStorage.setItem('cartArry', JSON.stringify(array));
+        };
