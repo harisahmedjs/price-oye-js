@@ -154,6 +154,6 @@ function gotoCart() {
 }
 
 
-function login() {
+function log() {
     window.location='./login.html'
 }
